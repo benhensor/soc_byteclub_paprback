@@ -13,8 +13,8 @@ describe('Header', () => {
 
     const logoElement = screen.getByAltText('Logo');
     const srcAttribute = logoElement.getAttribute('src');
-    expect(srcAttribute).toBe('paperback_logo.svg');
+    expect(srcAttribute).toBe('paprback_logo.svg');
   });
 });
 
-//test
+
