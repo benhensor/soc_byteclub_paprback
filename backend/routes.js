@@ -1,5 +1,6 @@
 import {
   getBooks,
+  getBookByTitle,
   getMyListings,
   getOthersListings,
   postListing,
@@ -31,10 +32,7 @@ app.get("/api/books", async function (req, res) {
   // Get a single book by title
   app.get("/api/books/:title", async function (req, res) {
     try {
-      const result = await pool.query(
-        "SELECT * FROM books WHERE LOWER(title) = $1",
-        [req.params.title.toLowerCase()]
-      );
+      const result = await getBookByTitle(pool, req.params.title);
       if (result.rows.length > 0) {
         res.json({ success: true, payload: result.rows });
       } else {

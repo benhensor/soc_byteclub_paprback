@@ -50,7 +50,7 @@ function ListYourBook() {
   // Function to handle the search button click
   async function handleSearchClick() {
     if (searchTerm) {
-      await fetch(`http://localhost:5432/api/books/${searchTerm}`)
+      await fetch(`https://paprback-backend.onrender.com/api/books/${searchTerm}`)
         .then((res) => {
           if (res.ok) {
             return res.json();
@@ -110,7 +110,7 @@ function ListYourBook() {
   // // Make the API call when newListing state changes
   useEffect(() => {
     if (newListing.title !== "") {
-      fetch("http://localhost:5432/api/listings", {
+      fetch("https://paprback-backend.onrender.com/api/listings", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

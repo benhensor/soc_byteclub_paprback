@@ -31,7 +31,7 @@ function Books() {
   const listingsCall = async () => {
     try {
       const response = await fetch(
-        'http://localhost:5432/api/listings'
+        'https://paprback-backend.onrender.com/api/listings'
       );
       const data = await response.json();
 
@@ -119,6 +119,7 @@ function Books() {
   const handleBookClick = (listing) => {
     console.log('Book Clicked:', listing);
     setSelectedBook(listing);
+    console.log('Selected Book:', selectedBook);
     navToBookView(`/bookview/${listing.listing_id}`, {
       state: {
         selectedBook: listing,

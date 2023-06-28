@@ -9,7 +9,7 @@ function ListingsCarousel() {
 
   // useEffect to fetch listings data from the API on component mount
   useEffect(() => {
-    fetch(`http://localhost:5432/api/listings`)
+    fetch(`https://paprback-backend.onrender.com/api/listings`)
       .then((res) => {
         if (res.ok) {
           return res.json();
@@ -54,7 +54,7 @@ function ListingsCarousel() {
           responsive={{
             xxxxl: {
               breakpoint: {
-                max: 3000,
+                max: 10000,
                 min: 1600,
               },
               items: 6,

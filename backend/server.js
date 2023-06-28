@@ -4,13 +4,13 @@ import pkg from 'pg';
 import cors from 'cors';
 import Routes from './routes.js';
 //import nodemon from 'nodemon';
-
+ 
 export const { Pool } = pkg;
 dotenv.config();
 
 const app = express();
 const port = process.env.PORT || 5432; // default port to listen
-
+ 
 const connectionString = process.env.DB_CONNECTION_STRING;
 const apiKey = process.env.API_KEY;
 //Hello!!!

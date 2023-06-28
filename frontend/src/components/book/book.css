@@ -19,7 +19,7 @@
   z-index: 1;
   scale: 1.2;
   cursor: pointer;
-  background-color: transparent
+  background-color: transparent;
 }
 #like-heart:hover {
   z-index: 1;
@@ -30,7 +30,6 @@
 .heart-pink path {
   fill: var(--close-color);
   stroke: var(--background);
-
 }
 
 #book-cover {
@@ -41,25 +40,25 @@
 }
 
 #book-title {
-  font-size:var(--text-r);
+  font-size: var(--text-r);
   font-weight: bold;
 }
- 
+
 #book-author {
-  font-size:var(--text-r);
+  font-size: var(--text-r);
+ 
 }
 
 #book-distance {
-  font-size:var(--text-r);
-  color: var(--secondary-color);
+  font-size: var(--text-r);
   font-weight: bold;
+  opacity: 0.6;
 }
 
-#book-distance span {
+/* #book-distance span {
   color: var(--secondary-color);
   font-weight: bold;
-}
+} */
 
 @media screen and (max-width: 600px) {
-  
 }

@@ -16,13 +16,13 @@
   Header at all screen sizes.   
   */
 #content {
-  padding-top: 90px;
+  padding-top: 11rem;
   flex: 1;
 }
 
 @media screen and (max-width: 600px) {
   #content {
-    padding-top: 70px;
+    padding-top: 8rem;
   }
 }
 

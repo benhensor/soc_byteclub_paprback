@@ -12,6 +12,23 @@ export async function getBooks(pool) {
   return result.rows;
 }
 
+// GET BOOK BY transitionDelay: 
+
+export async function getBookByTitle(pool, title) {
+  try {
+    const result = await pool.query("SELECT * FROM books WHERE LOWER(title) = $1", [title.toLowerCase()]);
+    if (result.rows.length > 0) {
+      return result.rows[0];
+    } else {
+      return null;
+    }
+  } catch (error) {
+    console.error("Error executing query:", error);
+    return null;
+  }
+}
+
+
 // LISTINGS
 
 // get my listings

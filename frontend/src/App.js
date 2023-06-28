@@ -20,11 +20,17 @@ function App() {
   // const [loggedIn, setLoggedIn] = useState(false);
   const [message, setMessage] = useState('');
   useEffect(() => {
-    fetch('http://localhost:5432/message')
+    fetch('https://paprback-backend.onrender.com/message')
       .then((res) => res.json())
       .then((data) => setMessage(data.message));
   });
 
+  useEffect(() => {
+    console.log('Message:', message);
+  }, [message]);
+
+  
+  
   return (
     <main className="App">
       <Header />

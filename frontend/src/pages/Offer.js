@@ -33,7 +33,7 @@ function Offer() {
 
   async function listingsCall() {
     try {
-      const response = await fetch("http://localhost:5432/api/listings");
+      const response = await fetch("https://paprback-backend.onrender.com/api/listings");
       const data = await response.json();
 
       if (response.ok) {

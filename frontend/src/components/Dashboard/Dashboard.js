@@ -9,6 +9,7 @@ function Dashboard({ listBookRef }) {
   };
 
   return (
+
     <div className="user-info-container">
       <div className="user-image-container">
         <img
@@ -17,6 +18,9 @@ function Dashboard({ listBookRef }) {
           alt="Zendaya"
         ></img>
       </div>
+
+    <div id="dashboard">
+
       <div className="userDetails">
         <h1 className="welcome-text">
           Welcome <span className="name-text">Zendaya!</span>
@@ -48,6 +52,7 @@ function Dashboard({ listBookRef }) {
             List a Book
           </button>
         </div>
+
       </div>
     </div>
   );
