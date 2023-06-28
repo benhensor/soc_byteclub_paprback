@@ -35,6 +35,8 @@
   .listings-carousel-container {
     height: 100%;
     width: auto;
+    margin: auto;
+
   }
 
 
@@ -87,3 +89,4 @@
   margin: auto;
   
 }
+

@@ -1,10 +1,22 @@
 import React from 'react';
+import { useRef } from 'react';
 import './Dashboard.css';
 import { Link } from 'react-router-dom';
 
-function Dashboard() {
+function Dashboard({ listBookRef }) {
+  const handleListBookClick = () => {
+    listBookRef.current.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <div className="user-info-container">
+      <div className="user-image-container">
+        <img
+          className="user-image"
+          src="https://i.pinimg.com/474x/2b/a9/ec/2ba9ecf8e084d6b699ea6b5dd7e5575d.jpg"
+          alt="Zendaya"
+        ></img>
+      </div>
       <div className="userDetails">
         <h1 className="welcome-text">
           Welcome <span className="name-text">Zendaya!</span>
@@ -22,17 +34,20 @@ function Dashboard() {
         <p className="inner-text">
           <span className="bolded">Phone:</span> 0121 987 654
         </p>
-        <Link to="http://localhost:3000/browse">
-          <button className="find-a-book-button">Find A Book</button>
-        </Link>
-      </div>
+        <div className="user-buttons">
+          <Link to="http://localhost:3000/browse">
+            <button className="find-a-book-button">
+              Find A Book
+            </button>
+          </Link>
 
-      <div className="user-image-container">
-        <img
-          className="user-image"
-          src="https://i.pinimg.com/474x/2b/a9/ec/2ba9ecf8e084d6b699ea6b5dd7e5575d.jpg"
-          alt="Zendaya"
-        ></img>
+          <button
+            className="list-a-book-button"
+            onClick={handleListBookClick}
+          >
+            List a Book
+          </button>
+        </div>
       </div>
     </div>
   );

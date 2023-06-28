@@ -16,9 +16,9 @@ function Home() {
           <h1>We are Paprback</h1>
         </div>
 
-        <Link to="https://dev-4lkat7o8wi7ta0m4.us.auth0.com/u/signup?state=hKFo2SA2OWtySGIxck1ZcUVOak5zbldXSXVmMXNiVHppMEVab6Fur3VuaXZlcnNhbC1sb2dpbqN0aWTZIFZleEw1Q1FkM01JM0ZvSnJnNW12NlhrRmxDUVBKMFpLo2NpZNkgNENXNlRRSEYxQVlnUGlDem9GTmY2d3V2aVlPUDRMVTg">
+        <Link to="/listbook">
           <button id="heroSignup" className="signup">
-            Get Started
+            List a Book
           </button>
         </Link>
         <img className="hero" src={homeHero} alt="Logo" />

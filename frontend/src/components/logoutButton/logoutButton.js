@@ -6,7 +6,7 @@ const LogOutButton = () => {
   console.log(isAuthenticated); // Moved outside the return statement
 
   return (
-    !isAuthenticated && (
+    isAuthenticated && (
       <button className="logOut" onClick={() => logout()}>
         Log Out
       </button>

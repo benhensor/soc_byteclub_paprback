@@ -4,10 +4,14 @@ import './header.css';
 import React, { useState, useEffect } from 'react';
 import userIconGrey from '../../assets/icons/userIconGrey.png';
 import gHeart from '../../assets/icons/gHeart.png';
+import { useAuth0 } from '@auth0/auth0-react';
+import LogoutButton from '../logoutButton/logoutButton';
+import LoginButton from '../loginButton/loginButton';
 
 function Header() {
   // toggle hide show login/logout button depending on if user is logged in
   const [menuOpen, setMenuOpen] = useState(false);
+  const { isAuthenticated } = useAuth0();
 
   // useEffect to handle resizing and closing the menu on smaller screens
   useEffect(() => {
@@ -40,15 +44,15 @@ function Header() {
           </div>
           <div className="user-access">
             {/* Render signup and login buttons and link them to their respective pages */}
-            <Link to="https://dev-4lkat7o8wi7ta0m4.us.auth0.com/u/signup?state=hKFo2SA2OWtySGIxck1ZcUVOak5zbldXSXVmMXNiVHppMEVab6Fur3VuaXZlcnNhbC1sb2dpbqN0aWTZIFZleEw1Q1FkM01JM0ZvSnJnNW12NlhrRmxDUVBKMFpLo2NpZNkgNENXNlRRSEYxQVlnUGlDem9GTmY2d3V2aVlPUDRMVTg">
+            <Link to="https://dev-4lkat7o8wi7ta0m4.us.auth0.com/u/signup?state=hKFo2SBhVFJjb2haVm9KWFk0a3JSVzZGX1YzSlhGXy0zSVl6b6Fur3VuaXZlcnNhbC1sb2dpbqN0aWTZIE5oWVFxQ1E3RUpSYUZJOHJta0poNG54ZGtuVGN2NXZMo2NpZNkgNENXNlRRSEYxQVlnUGlDem9GTmY2d3V2aVlPUDRMVTg">
               <button className="signup">Sign up</button>
             </Link>
-            <Link to="https://dev-4lkat7o8wi7ta0m4.us.auth0.com/u/login?state=hKFo2SA2OWtySGIxck1ZcUVOak5zbldXSXVmMXNiVHppMEVab6Fur3VuaXZlcnNhbC1sb2dpbqN0aWTZIFZleEw1Q1FkM01JM0ZvSnJnNW12NlhrRmxDUVBKMFpLo2NpZNkgNENXNlRRSEYxQVlnUGlDem9GTmY2d3V2aVlPUDRMVTg">
-              <button className="logIN">Login</button>
+            <Link to="https://dev-4lkat7o8wi7ta0m4.us.auth0.com/u/login?state=hKFo2SBhVFJjb2haVm9KWFk0a3JSVzZGX1YzSlhGXy0zSVl6b6Fur3VuaXZlcnNhbC1sb2dpbqN0aWTZIE5oWVFxQ1E3RUpSYUZJOHJta0poNG54ZGtuVGN2NXZMo2NpZNkgNENXNlRRSEYxQVlnUGlDem9GTmY2d3V2aVlPUDRMVTg">
+              <button className="logIN">Logout</button>
             </Link>
-
-            {/* <LoginButton />
-            <LogoutButton />  */}
+            {/* 
+            <LoginButton />
+            <LogoutButton /> */}
           </div>
         </div>
         <div className="menuBar">
