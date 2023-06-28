@@ -1,6 +1,6 @@
 import homeHero from '../assets/images/homeHero.jpg';
 import { Link } from 'react-router-dom';
-import './home.css';
+import './Home.css';
 function Home() {
   return (
     <section className="pages" id="home">

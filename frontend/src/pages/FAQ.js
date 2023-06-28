@@ -1,4 +1,4 @@
-import './faq.css';
+import './FAQ.css';
 import faq2 from './../assets/images/faq2.jpg';
 import { useState } from 'react';
 
